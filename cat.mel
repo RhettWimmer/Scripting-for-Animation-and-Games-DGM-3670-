@@ -1,0 +1,21 @@
+polySphere -name "Cat_Face";
+move 0 5 .22;
+scale 4.7 4.1 1.6;
+
+polyCone -name "Ears";
+move -3.5 8 0;
+scale 1.5 1.5 1.2;
+rotate 0 0 50;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 0 -ch 1 Ears;
+
+polySphere -name "Eyes";
+move -1.4 5 1.7;
+scale 1 1 .4;
+rotate -5 -13.9 21.1;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 0 -ch 1 Eyes;
+
+polySphere -name "Lip_Balls";
+move -0.4 3.6 1.7;
+rotate 10.8 0 0;
+scale 0.78 0.78 0.47;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 0 -ch 1 Lip_Balls;
