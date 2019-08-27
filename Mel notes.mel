@@ -1,0 +1,13 @@
+global //Another word for public// string //Functions start with $// $name = "myName";
+
+//Put things in {} to make it not global//
+
+{
+string $array[];
+$array[0] = "Donkey";
+$array[1] = "Reeee";
+print $array;
+}
+
+// ` is to return //
+//poly unite//

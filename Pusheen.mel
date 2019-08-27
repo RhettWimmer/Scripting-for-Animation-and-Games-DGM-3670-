@@ -1,0 +1,27 @@
+{
+polySphere -name "Body_Geo";
+move 0 2.6 0;
+scale 4.2 2.5 2.1;
+
+polyExtrudeFacet Body_Geo.f[288];
+polyExtrudeFacet Body_Geo.f[289];
+polyExtrudeFacet Body_Geo.f[269];
+polyExtrudeFacet Body_Geo.f[268];
+polyExtrudeFacet Body_Geo.f[328];
+polyExtrudeFacet Body_Geo.f[329];
+polyExtrudeFacet Body_Geo.f[348];
+polyExtrudeFacet Body_Geo.f[349];
+
+
+    string $ear[];
+    $ear = Body_Geo;
+    print $ear;
+}
+
+
+/*
+polySphere -name "Ear_1_Geo";
+move -3.1 4.2 0;
+rotate 0 0 -2;
+scale .6 1.1 .4;
+*/

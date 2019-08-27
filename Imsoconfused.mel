@@ -1,0 +1,95 @@
+{
+polySphere -name "Body_Geo";
+move 0 2.7 0 Body_Geo;
+scale 4.2 2.5 2.1 Body_Geo;
+
+setAttr "polySphere1.subdivisionsHeight" 9;
+polyDelEdge -cv true -ch 1 Body_Geo.e[179] Body_Geo.e[199] Body_Geo.e[219] Body_Geo.e[239] Body_Geo.e[259] Body_Geo.e[279] Body_Geo.e[299] Body_Geo.e[319] Body_Geo.e[339];
+polyDelEdge -cv true -ch 1 Body_Geo.e[161] Body_Geo.e[180] Body_Geo.e[199] Body_Geo.e[218] Body_Geo.e[237] Body_Geo.e[256] Body_Geo.e[275] Body_Geo.e[294] Body_Geo.e[313];
+
+//Tail
+polyExtrudeFacet Body_Geo.f[71];
+polyMoveFacet -tx 1.5 -ty 2 -tz 0 Body_Geo.f[71];
+scale 1 .5 .1 Body_Geo.f[71];
+
+//Ear 1
+polyExtrudeFacet Body_Geo.f[98];
+move -3 5.8 .1 Body_Geo.f[98];
+
+//Ear 2
+polyExtrudeFacet Body_Geo.f[152];
+polyMoveFacet -tx -6 -ty 1  Body_Geo.f[152];
+scale .1 1 1 Body_Geo.f[152];
+
+//Eye 1
+polySphere -name "Eye_Geo_1";
+move -2.7 3.6 1.4 Eye_Geo_1;
+scale .3 .14 .30 Eye_Geo_1;
+rotate 1508.9 -15.9 -2.4 Eye_Geo_1;
+
+//Eye 2
+polySphere -name "Eye_Geo_2";
+move -1.3 3.7 1.8 Eye_Geo_2;
+rotate 1513.8 -16 -2.4 Eye_Geo_2;
+scale .3 .14 .30 Eye_Geo_2;
+
+//Leggies
+polySphere -name "Leg_Geo_1";
+move -2.2 .8 -.01 Leg_Geo_1;
+scale .5 .9 .5 Leg_Geo_1;
+
+polySphere -name "Leg_Geo_2";
+move -.9 .8 -.01 Leg_Geo_2;
+scale .5 .9 .5 Leg_Geo_2;
+
+polySphere -name "Leg_Geo_3";
+move 1 .8 -.01 Leg_Geo_3;
+scale .5 .9 .5 Leg_Geo_3;
+
+polySphere -name "Leg_Geo_4";
+move 2.1 .8 -.01 Leg_Geo_4;
+scale .5 .9 .5 Leg_Geo_4;
+
+//Smooth Body
+polySmooth Body_Geo;
+
+//Whiskers
+polyCylinder -name "Whisker_Geo_1";
+move -3.8 3.2 1 Whisker_Geo_1;
+rotate 0 0 -105.5 Whisker_Geo_1; 
+scale .1 .8 .1 Whisker_Geo_1;
+polySmooth Whisker_Geo_1;
+
+polyCylinder -name "Whisker_Geo_2";
+move -3.8 2.8 1 Whisker_Geo_2;
+rotate 0 0 -86.3 Whisker_Geo_2; 
+scale .1 .8 .1 Whisker_Geo_2;
+polySmooth Whisker_Geo_2;
+
+polyCylinder -name "Whisker_Geo_3";
+move -3.7 3.6 1 Whisker_Geo_3;
+rotate 0 0 -121.8 Whisker_Geo_3; 
+scale .1 .8 .1 Whisker_Geo_3;
+polySmooth Whisker_Geo_3;
+
+polyCylinder -name "Whisker_Geo_4";
+move -.42 3.3 2 Whisker_Geo_4;
+rotate 28.6 -12.3 -86.1 Whisker_Geo_4; 
+scale .1 .8 .1 Whisker_Geo_4;
+polySmooth Whisker_Geo_4;
+
+polyCylinder -name "Whisker_Geo_5";
+move -.27 3.7 2 Whisker_Geo_5;
+rotate 26 -17.3 -76.1 Whisker_Geo_5; 
+scale .1 .8 .1 Whisker_Geo_5;
+polySmooth Whisker_Geo_5;
+
+polyCylinder -name "Whisker_Geo_6";
+move -.47 3 2 Whisker_Geo_6;
+rotate 30.9 -1.4 -105.2 Whisker_Geo_6; 
+scale .1 .8 .1 Whisker_Geo_6;
+polySmooth Whisker_Geo_6;
+
+polyUnite -name "Pusheen" Whisker_Geo_1 Whisker_Geo_1 Whisker_Geo_2 Leg_Geo_4 Leg_Geo_3 Whisker_Geo_3 Leg_Geo_1 Leg_Geo_2 Whisker_Geo_6 Eye_Geo_2 Eye_Geo_1 Body_Geo Whisker_Geo_5 Whisker_Geo_4;
+group  -name "Pusheen_Geo" Body_Geo Eye_Geo_1 Eye_Geo_2 Leg_Geo_1 Leg_Geo_2 Leg_Geo_3 Leg_Geo_4 Whisker_Geo_1 Whisker_Geo_2 Whisker_Geo_3 Whisker_Geo_4 Whisker_Geo_5 Whisker_Geo_6 Pusheen;
+}
