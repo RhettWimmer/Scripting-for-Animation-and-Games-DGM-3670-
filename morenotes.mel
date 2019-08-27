@@ -1,0 +1,11 @@
+$obj = ["pSphere1", "pSphere2"];
+
+polyExtrude $obj[0]+".f[32];
+
+
+//renaming
+
+$obj = "pSphere1"
+$obj = `rename $obj "Ball";
+	print $obj;
+ 
