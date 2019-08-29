@@ -1,0 +1,10 @@
+{
+string $obj[];
+
+$obj = `polySphere`;
+move 0 2.7 0 $obj[0];
+scale 4.2 2.5 2.1 $obj[0];
+rename $obj[0] "Pusheen";
+
+print $obj;
+}
