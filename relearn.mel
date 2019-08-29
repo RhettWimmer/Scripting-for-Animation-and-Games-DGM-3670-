@@ -1,0 +1,8 @@
+string $names[] = {"Ree", "Reeeeeee"};
+
+int $size = size($names);
+
+$names[ $size ]
+$names[size($names)] = "Dog";
+print $names
+print ($names[size($names) - 1]);
