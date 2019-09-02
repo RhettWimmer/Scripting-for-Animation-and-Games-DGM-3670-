@@ -1,4 +1,6 @@
-global //Another word for public// string //Functions start with $// $name = "myName";
+global //Another word for public// 
+string //Functions start with $// 
+$name = "myName";
 
 //Put things in {} to make it not global//
 

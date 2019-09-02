@@ -4,10 +4,14 @@ string $obj[];
 string $objects[];
 
 $obj = `polySphere -r $radius`;
+
 move -absolute -worldSpace 0 ($radius*2)0 $obj[0];
+
 $radius++;
+
 $objects[size($objects)] = $obj[0];
 
 // duplicate stuff//
+
 
 }
