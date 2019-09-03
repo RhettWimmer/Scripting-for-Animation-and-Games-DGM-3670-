@@ -1,0 +1,16 @@
+//Extrutions
+string $compo[] = {"f[134]" , "f[133]"};
+
+print $compo;
+
+//To Select things and show what they are
+ls -sl
+
+"\+" //is tab in string
+"\r" //carriage return
+"\n" //New line
+"\\" //Adding a \\
+"\"" //Adds "" to a string
+
+for ($i = 0; /*< iterator*/ $i < 10; /*< Condition*/ $i++ /*< Increment*/ ){
+} 

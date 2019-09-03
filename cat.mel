@@ -1,5 +1,0 @@
-polySphere -name "Body";
-move 0 2.6 0;
-scale 4.2 2.5 2.1;
-select -radius -sym Body.vtx[199];
-move -radius -smn -0.378186 0 0;
