@@ -1,0 +1,19 @@
+{
+string $names[] = {"Ree", "reeeee", "E"};
+string $cats[] = {"Puff Daddy", "Mew", "Chunk"};
+string $Dogs[] = {"Puge", "Thicc", "Spot"};
+
+for(i=0; i<size($names); $i++){
+	print ($names[$i]);
+} 
+for(i=0; i<size($cats); $i++){
+	print ($cats[$i]);
+} 
+for(i=0; i<size($dogs); $i++){
+	print ($dogs[$i]);
+} 
+proc printArray(){
+		for(i=0; i<size($dogs); $i++){
+	print ($dogs[$i]);
+	}
+}

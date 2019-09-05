@@ -1,0 +1,23 @@
+proc insultGenerator(){
+	string $insults[] = {"Donkey", "Mama's boy", "Poop butt", "Youre mom"};
+	
+	int $size = `size($insults)`;
+	float $randNum = `rand $size`;
+	int $index = `floor $randNum`;
+	
+	print ($insults[$index]);
+}
+insultGenerator();
+
+proc ComplimentGen (string $name, int $age){
+	string $compliments[] = {"Your face is nice.", "You don't look as ugly as other people", "Howdy"};
+	
+	int $size = `size($compliments)`;
+	float $randNum = `rand $size`;
+	int $index = `floor $randNum`;
+	
+	
+	$age -= 7;
+	print ($name + ", " + $compliments[$index] + " You don't look a day over " + $age + "!");
+}
+ComplimentGen("Bill", 55);
