@@ -1,0 +1,28 @@
+/*{
+    int $chode = 5;
+    for ($i = 1; $i < $chode; $i++ ){
+        print ("Chode");
+    } 
+}
+*/
+
+
+{
+    int $blocksAmnt = 10;
+    for ($i = 1; $i < $blocksAmnt; $i++ ){
+        	$objs = `polyCube`;
+        	move -absolute -worldSpace 10 5 2  $objs[0];
+    } 
+}
+
+/*
+	int $blockAmnt = 10;
+	string $objs[];
+
+	for ($i = 1; $i < &blockAmnt; $i++;){
+	
+	$objs = `polyCube`;
+	move -absolute -worldSpace 0 0 0  $objs[0];
+	}
+
+*/

@@ -14,3 +14,6 @@ ls -sl
 
 for ($i = 0; /*< iterator*/ $i < 10; /*< Condition*/ $i++ /*< Increment*/ ){
 } 
+
+for ($i = 0; $i < 10; $i++ ){
+} 
