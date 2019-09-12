@@ -1,0 +1,6 @@
+string $names[] = {"Donkey","Dr.Balls","BennettButt"};
+
+for ($item in $names)
+{
+	print ("My name is " + $item + ". ");
+}
