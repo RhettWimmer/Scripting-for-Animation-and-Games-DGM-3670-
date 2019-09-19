@@ -1,0 +1,40 @@
+proc Renamer(string $namer)
+{
+    //Variables
+	string $name = "L_Leg_###_Geo";
+	string $tokens[];
+	string $selection[];
+	
+	tokenize $name "#" $tokens;
+	$selection = `ls -sl`;
+	
+	//Incorrect naming input
+	if (size($tokens) != 2){
+		error("Input string is not in the correct form. Use \"Prefix_##_Suffix\"");
+	}
+	
+	//Missing Selection Warning
+	if (!size($selection) > 0){
+            error ("Missing selection");
+    }
+
+	int $numberDelim = size($name) - size($tokens[0]) - size($tokens[1]);
+	
+	for($i=0; $i<size($selection); $i++){
+		//$selection[$i]; : each selection
+		// $i + 1 : iterator value to insert into name
+		//Size does not work on ints
+		
+		int $digitsIter = `size((string)($i+1))`;
+		int $paddingNum = $numberDelim - $digitsIter;
+		string $pad = "";
+		
+		for ($j=0; $j<$paddingNum; $j++){
+			$pad = $pad + "0"; 
+		}
+			
+		string $newName = $tokens[0] + $pad + ($i + 1) + $tokens[1]; //Must add math solvers in brakets
+		rename $selection[$i] $newName;
+	}
+}
+Renamer("L_Leg_###_Geo");

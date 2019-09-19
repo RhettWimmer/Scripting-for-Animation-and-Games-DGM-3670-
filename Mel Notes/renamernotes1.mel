@@ -1,0 +1,15 @@
+{
+	string $name = "L_Leg_###_Geo";
+	string $tokens[];
+	string $selection[];
+	
+	tokenize $name "#" $tokens;
+	$selection = `ls -sl`;
+	
+	for($i=0; $i<size($selection); $i++){
+		//$selection[$i]; : each selection
+		// $i + 1 : iterator value to insert into name
+		string $newName = $tokens[0] + ($i + 1) + $tokens[1]; //Must add math solvers in brakets
+		rename $selection[$i] $newName;
+	}
+}

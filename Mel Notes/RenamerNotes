@@ -1,0 +1,6 @@
+{
+	string $name = "L_Leg_###_Geo";
+	string $tokens[];
+	
+	tokenize $name "#" $tokens;
+}
