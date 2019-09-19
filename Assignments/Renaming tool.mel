@@ -1,0 +1,28 @@
+{ 
+    proc renamingTool(){
+        
+       string $selection[] =`ls -sl`;
+       string $objName;
+       int $toke;
+       string $pound = "#";
+       string $string[];
+       string $fucking = "I want to die";
+        
+        if (!size($selection) > 0){
+            error ("Missing selection");
+        }
+        
+        
+        for($item in $selection){
+            int $objAmnt = size($selection);
+                       
+            $toke = `tokenize $objName $pound $string`;
+            
+            rename ("Leg_" + $toke + "_Jnt");
+			print($objAmnt);
+			print($toke);
+			print($fucking);
+		}
+    }
+    renamingTool();
+}

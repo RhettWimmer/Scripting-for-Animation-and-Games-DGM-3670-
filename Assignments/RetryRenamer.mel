@@ -1,0 +1,27 @@
+{
+    proc renameTool(
+    string $object,
+    string $type){
+      
+      //Variables
+      string $selection[] =`ls -sl`;
+      int $objAmnt = size($selection);
+      int $objVal = 0;
+      
+      //Missing Selection Warning
+       if (!size($selection) > 0){
+            error ("Missing selection");
+       }
+      
+      //Number Solver
+      for($i = 0; $i < size($selection); $i++){
+          $objVal += 1;
+          
+          rename ($object + $type);
+      }      
+      
+      print $objVal;
+        
+    }
+    renameTool("Leg_","_Jnt");
+}
