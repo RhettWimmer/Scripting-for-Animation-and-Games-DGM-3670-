@@ -1,0 +1,11 @@
+getAttr "pSphere1.translateX";
+
+//found in attribute editor
+setAttr "pSphere1.displayEdges" 0;
+
+move 1 2 3 "pShpere1";
+//xform -translation 1 2 3 "pSphere1";
+xform -q -translation "pSphere1";
+
+//bounding box is a hint (xform flag) 
+//midpoint formula, use boundingbox in midpoint formula
