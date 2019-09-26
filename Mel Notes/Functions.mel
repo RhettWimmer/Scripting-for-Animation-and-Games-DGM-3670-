@@ -12,8 +12,10 @@ for(i=0; i<size($cats); $i++){
 for(i=0; i<size($dogs); $i++){
 	print ($dogs[$i]);
 } 
+
+
 proc printArray(){
-		for(i=0; i<size($dogs); $i++){
-	print ($dogs[$i]);
+	for(i=0; i<size($dogs); $i++){
+		print ($dogs[$i]);
 	}
 }
