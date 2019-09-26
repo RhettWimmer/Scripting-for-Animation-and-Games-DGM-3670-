@@ -1,11 +1,23 @@
 //  Sudocode //
 
-/* - Takes a selection (Selection can be from any type of thing)
+/* 
+    - Create locator
+    - Takes a selection (Selection can be from any type of thing)
         select ls -sl
    - Takes values from each object
    - Midpoint value X + X / 2 
+   
 
-
+*/
+// Notes //
+/* 
+    Store selection
+        
+    Combined center of all objects
+        Find center of all slections
+            Find method or formula
+        Create locator
+        Move to center point
 */
 
 //  Test Land //
