@@ -1,6 +1,15 @@
 //  Sudocode //
 
-// Tool takes a selection (Selection can be from any type of thing
-        //select -sl ls
+/* - Takes a selection (Selection can be from any type of thing)
+        select ls -sl
+   - Takes values from each object
+   - Midpoint value X + X / 2 
 
-//c
+
+*/
+
+//  Test Land //
+
+string $selection[] = `ls -sl`;
+
+xform -q -boundingBox $selection; 
