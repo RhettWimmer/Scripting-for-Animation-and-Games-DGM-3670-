@@ -1,0 +1,16 @@
+proc float calc(){
+float $numbers[] = {1, 2, 3, 4, 5, 5};
+
+float $added = $numbers[0] + $numbers[1] + $numbers[2] + $numbers[3] + $numbers[4] + $numbers[5];
+
+return $added;
+}
+calc();
+
+//float $sum = $added;
+print ($added);
+
+
+
+
+

@@ -1,4 +1,4 @@
-//proc calculator(){
+proc float calculator(){
 float $numbers[] = {1, 2, 3, 4, 5, 5};
 
 //Simple Math
@@ -13,15 +13,18 @@ float $med = size($numbers) + 1;
 float $median = $med / 2;
 
 
+return $added;
+}
+calculator();
+
 print ("Added Value: " + $added + "\n");
-print ("Subtracted Value: " + $subbed + "\n");
-print ("Multiplied Value: " + $multi + "\n");
-print ("Divided Value: " + $divi + "\n");
+//print ("Subtracted Value: " + $subbed + "\n");
+//print ("Multiplied Value: " + $multi + "\n");
+//print ("Divided Value: " + $divi + "\n");
 
-print ("Mean Value: " + $mean + "\n");
+//print ("Mean Value: " + $mean + "\n");
 
-print ("Median Value: " + $median + "\n");
-//print $numbers[$median];
-//calculator();
-//}
+//print ("Median Value: " + $median + "\n");
+
+
 
