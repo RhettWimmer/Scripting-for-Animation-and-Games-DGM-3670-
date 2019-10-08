@@ -1,0 +1,1 @@
+Why can't I print something if it's in a fucntion?

@@ -1,0 +1,27 @@
+//proc calculator(){
+float $numbers[] = {1, 2, 3, 4, 5, 5};
+
+//Simple Math
+float $added = $numbers[0] + $numbers[1] + $numbers[2] + $numbers[3] + $numbers[4] + $numbers[5];
+float $subbed = $numbers[0] - $numbers[1] - $numbers[2] - $numbers[3] - $numbers[4] - $numbers[5];
+float $multi = $numbers[0] * $numbers[1] * $numbers[2] * $numbers[3] * $numbers[4] * $numbers[5];
+float $divi = $numbers[0] / $numbers[1] / $numbers[2] / $numbers[3] / $numbers[4] / $numbers[5];
+//Mean
+float $mean = $added / size($numbers);
+//Median
+float $med = size($numbers) + 1;
+float $median = $med / 2;
+
+
+print ("Added Value: " + $added + "\n");
+print ("Subtracted Value: " + $subbed + "\n");
+print ("Multiplied Value: " + $multi + "\n");
+print ("Divided Value: " + $divi + "\n");
+
+print ("Mean Value: " + $mean + "\n");
+
+print ("Median Value: " + $median + "\n");
+//print $numbers[$median];
+//calculator();
+//}
+
