@@ -1,0 +1,18 @@
+proc float Med(float $num[]){    
+        float $amount;
+        float $sizel = size($num) + 1;
+        float $me = $sizel / 2;
+
+
+        return $me;
+}
+
+    float $values[] = {1,2,3};
+    
+    $tempnum = Med($values);
+    
+    
+    
+//float $med = size($numbers) + 1;
+//float $median = $med / 2;
+    

@@ -1,0 +1,67 @@
+        //Addition  
+proc float Add(float $num[]){    
+        float $amount;
+        $amount = $num[0] + $num[1] + $num[2];
+        
+        return $amount;
+}
+        //Subtraction
+proc float Minus(float $num[]){    
+        float $amount;
+        $amount = $num[0] - $num[1] - $num[2];
+        
+        return $amount;
+}
+        //Multiply
+proc float Multiply(float $num[]){
+    float $amount;
+	$amount = $num[0] * $num[1] * $num[2];
+	
+	return $amount;
+}
+
+		//Divide
+proc float Divide (float $num[]){
+	float $amount;
+	$amount = $num[0] / $num[1] / $num[2];
+	
+	return $amount;
+}
+
+    //Mean
+proc float MEAN(float $num[]){    
+        float $amount;
+        float $r = size($num);
+        $amount = $num[0] + $num[1] + $num[2];
+        $wat = $amount / $r;
+        
+        return $wat;
+}
+
+    //Median
+proc float Med(float $num[]){    
+        float $amount;
+        float $sizel = size($num) + 1;
+        float $me = $sizel / 2;
+
+
+        return $me;
+}
+
+    //Values
+    float $values[] = {1,2,4};
+    
+    //Applying to value to print
+    $sum = Add($values);
+    $divide = Minus($values);
+	$multi = Multiply($values);
+    $divi = Divide($values);
+    $mea = MEAN($values);
+    $median = Med($values);
+	
+print ("Added Value: " + $sum + "\n");
+print ("Subtracted Value: " + $divide + "\n");
+print ("Multiplied Value: " + $multi + "\n");
+print ("Divided Value: " + $divi + "\n");
+print ("Mean Value: " + $mea + "\n");
+print ("Median Value: " + $median + "\n");
