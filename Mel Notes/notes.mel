@@ -1,0 +1,6 @@
+proc tes(int $con){
+    if($con == 10 || 15){
+        print ($con + " Done");
+    } 
+}
+tes(10);
