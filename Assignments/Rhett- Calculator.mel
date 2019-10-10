@@ -51,7 +51,7 @@ proc float Med(float $num[]){
     //Values
     float $values[] = {1,2,4};
     
-    //Applying to value to print
+
     $sum = Add($values);
     $divide = Minus($values);
 	$multi = Multiply($values);
