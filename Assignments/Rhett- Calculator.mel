@@ -59,9 +59,9 @@ proc float Med(float $num[]){
     $mea = MEAN($values);
     $median = Med($values);
 	
-print ("Added Value: " + $sum + "\n");
-print ("Subtracted Value: " + $divide + "\n");
-print ("Multiplied Value: " + $multi + "\n");
-print ("Divided Value: " + $divi + "\n");
-print ("Mean Value: " + $mea + "\n");
-print ("Median Value: " + $median + "\n");
+print ($values[0] + " + " + $values[1]  + " + " +  $values[2] + " = " + $sum + "\n");
+print ($values[0] + " - " + $values[1]  + " - " +  $values[2] + " = "  + $divide + "\n");
+print ($values[0] + " * " + $values[1]  + " * " +  $values[2] + " = "  + $multi + "\n");
+print ($values[0] + " / " + $values[1]  + " / " +  $values[2] + " = " + $divi + "\n");
+print ("The mean of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " +  $mea + "\n");
+print ("The median of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " +  $median + "\n");
