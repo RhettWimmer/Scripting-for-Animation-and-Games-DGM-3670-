@@ -66,8 +66,25 @@ proc float Med(float $num[]){
 		}
 }
 
+    //Mode
+ proc float MODE(float $num[]){    
+        
+        float $sorted[] = `sort $num`;
+		float $curNum = $sorted[0];
+        
+		float $numCount = 0;
+		
+		for ($i = 1; $i < size($sorted); $i++){	
+		    if ($sorted[$i] == $curNum){
+				$numCount++;
+				print ($numCount + "\n");
+		}
+
+    }
+		return $numCount;	 
+}
     //Values
-    float $values[] = {10,5,20};
+    float $values[] = {10,10,10};
     
 
     $sum = Add($values);
@@ -77,6 +94,7 @@ proc float Med(float $num[]){
     $mea = MEAN($values);
     $median = Med($values);
     $p = pow($values);
+    $md = MODE($values);
 	
 print ($values[0] + " + " + $values[1]  + " + " +  $values[2] + " = " + $sum + "\n");
 print ($values[0] + " - " + $values[1]  + " - " +  $values[2] + " = "  + $divide + "\n");

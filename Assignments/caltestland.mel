@@ -67,41 +67,21 @@ global proc float Calculator(int $function, float $nums[])
 	return $result;
 }
 
-
-global proc float Power(float $power[])
-{
-	float $result = $power[0];
-	float $exp = $power[1];
-	
-	if($exp == 0)
-	{
-		return 1;
-	}
-	else
-	{
-		//$power[0] = $result;
-		$power[1] = $exp - 1;
-		return $result * Power($power);
-	}
-}
-
-
-/*
 global proc float Mode(float $mode[])
 {
-	int $count = 1;
-	int $countMode = 1;
+	//int $count = 1;
+	//int $countMode = 1;
 
-	float $sorted[] = `sort $mode`;
-	float $number = $sorted[0];
-	float $result = $number;
+	//float $sorted[] = `sort $mode`;
+	//float $number = $sorted[0];
+	//float $result = $number;
 
 	for ($i = 1; $i < size($sorted); $i++)
 	{
 		if ($sorted[$i] == $number)
 		{
 			$count++;
-		}
+		} 
 		else
 		{
 			if ($count > $countMode) 
@@ -115,9 +95,9 @@ global proc float Mode(float $mode[])
 	
 	}
 
-	return $result;
+	//return $result;
 }
-*/
+
 
 float $nums[] = {10,10,3,4,5,1,1,1,2};
 

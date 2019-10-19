@@ -9,7 +9,7 @@
     
     */
     
-    proc float pow(float $num[]){    
+   /* proc float pow(float $num[]){    
                 		
         float $amnt1 = $num[0];
         float $amnt2 = $num[1];
@@ -23,4 +23,4 @@
 
     float $val[] = {10,10,4};  
 
-    float $p = pow($val);
+    float $p = pow($val); */
