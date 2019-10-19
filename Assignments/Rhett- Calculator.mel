@@ -48,19 +48,20 @@ proc float Med(float $num[]){
 }
 
     //Power
-proc float power(float $num[]){
-	
-	float $amount1 = $num[0];
-	float $amount2 = $num[1];
-	
-	if ($amount2 == 0){
-	return 1;
-	}
-	
+    proc float pow(float $num[]){    
+                		
+        float $amnt1 = $num[0];
+        float $amnt2 = $num[1];
+					
+		if ($amnt2 == 0){ 
+			return 1; 
+		}else{
+			return pow($num[0], $num[1] / 2) * pow($num[0], $num[1] / 2);
+		}
 }
 
     //Values
-    float $values[] = {1,2,4};
+    float $values[] = {5,10,15};
     
 
     $sum = Add($values);
@@ -69,6 +70,7 @@ proc float power(float $num[]){
     $divi = Divide($values);
     $mea = MEAN($values);
     $median = Med($values);
+    $p = pow($values);
 	
 print ($values[0] + " + " + $values[1]  + " + " +  $values[2] + " = " + $sum + "\n");
 print ($values[0] + " - " + $values[1]  + " - " +  $values[2] + " = "  + $divide + "\n");
@@ -76,4 +78,4 @@ print ($values[0] + " * " + $values[1]  + " * " +  $values[2] + " = "  + $multi 
 print ($values[0] + " / " + $values[1]  + " / " +  $values[2] + " = " + $divi + "\n");
 print ("The mean of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " +  $mea + "\n");
 print ("The median of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " +  $median + "\n");
-//print ($pow + "\n");
+print ($values[0] + " To the power of " + $values[1] +  " is: " +  $p + "\n");
