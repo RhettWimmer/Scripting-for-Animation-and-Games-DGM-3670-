@@ -71,9 +71,14 @@ proc float Med(float $num[]){
 		
 		if ($num[0] == $num[1]){
 		    return $num[0];
-		        }
+		                        }
 				if ($num[0] == $num[2]){
 		    return $num[0];
+		                                }
+		if ($num[1] == $num[2]){
+		    
+		    return $num[1];		                 				
+				
 				} else {
 		    print (" !!! Warning: There is no mode. Mode result is now 0 !!!" + "\n");
 		    return 0;		     
@@ -82,7 +87,7 @@ proc float Med(float $num[]){
 
 }
     //Values
-    float $values[] = {10,50,10};
+    float $values[] = {5,10,10};
     
 
     $sum = Add($values);
@@ -101,4 +106,4 @@ print ($values[0] + " / " + $values[1]  + " / " +  $values[2] + " = " + $divi + 
 print ("The mean of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " +  $mea + "\n");
 print ("The median of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " +  $median + "\n");
 print ($values[0] + " To the power of " + $values[1] +  " is: " +  $p + "\n");
-print ($md);
+print ("The mode of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " +  $md + "\n");
