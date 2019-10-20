@@ -69,22 +69,22 @@ proc float Med(float $num[]){
     //Mode
  proc float MODE(float $num[]){    
         
-        float $sorted[] = `sort $num`;
-		float $curNum = $sorted[0];
-        
-		float $numCount = 0;
+        float $Num1 = $num[0];
+        float $Num2 = $num[1];
+        float $Num3 = $num[2];
 		
-		for ($i = 1; $i < size($sorted); $i++){	
-		    if ($sorted[$i] == $curNum){
-				$numCount++;
-				print ($numCount + "\n");
+		if ($Num1 == $Num2 || $Num3){
+		    return $Num1;
+		    //print ("I Work." + "\n");
+		} else {
+		    print (" !!! Warning: Cannot Divide by Zero. Divide result is now 0"  + "!!!" + "\n");
+		    return 0;		     
 		}
+		//return $Num1;
 
-    }
-		return $numCount;	 
 }
     //Values
-    float $values[] = {10,10,10};
+    float $values[] = {10,50,4};
     
 
     $sum = Add($values);
@@ -103,3 +103,4 @@ print ($values[0] + " / " + $values[1]  + " / " +  $values[2] + " = " + $divi + 
 print ("The mean of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " +  $mea + "\n");
 print ("The median of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " +  $median + "\n");
 print ($values[0] + " To the power of " + $values[1] +  " is: " +  $p + "\n");
+print ($md);
