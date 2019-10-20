@@ -1,3 +1,5 @@
+// --------- Run at least 3 times for results to work. I have no idea why. ---------- //
+
         //Addition  
 	global proc float Add(float $num[]){    
         float $amount;
@@ -135,11 +137,11 @@
 			print ("The mode of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " + $result + "\n");
 			break;
 	}	
-	//print ($result);
+			//print ($result);
 	//I have no idea why this return doesn't work.
     return $result;
 }
      Calc("Add", $values);
     //Values
-    //This calculator only can solve for 3 numbers because I'm stupid. ¯\_(?)_/¯
+    //This calculator only can solve for 3 numbers.
     float $values[] = {5,10,10};
