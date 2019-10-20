@@ -1,0 +1,109 @@
+        //Addition  
+proc float Add(float $num[]){    
+        float $amount;
+        $amount = $num[0] + $num[1] + $num[2];
+        
+        return $amount;
+}
+        //Subtraction
+proc float Minus(float $num[]){    
+        float $amount;
+        $amount = $num[0] - $num[1] - $num[2];
+        
+        return $amount;
+}
+        //Multiply
+proc float Multiply(float $num[]){
+    float $amount;
+	$amount = $num[0] * $num[1] * $num[2];
+	
+	return $amount;
+}
+
+		//Divide
+proc float Divide (float $num[]){
+	float $amount;
+	
+	if ($num[1] == 0){ 
+			print (" !!! Warning: Cannot Divide by Zero. Divide result is now 0"  + "!!!" + "\n");
+		}if ($num[2] == 0){
+		    print (" !!! Warning: Cannot Divide by Zero. Divide result is now 0"  + "!!!" + "\n");
+		}else{
+	$amount = $num[0] / $num[1] / $num[2];
+	
+	return $amount;
+	}
+}
+
+    //Mean
+proc float MEAN(float $num[]){    
+        float $amount;
+        float $r = size($num);
+        $amount = $num[0] + $num[1] + $num[2];
+        $wat = $amount / $r;
+        
+        return $wat;
+}
+
+    //Median
+proc float Med(float $num[]){   
+        
+        float $sorted[] = `sort $num`;
+        
+        return ($sorted[(size($num)/2)]);
+}
+
+    //Power
+    proc float pow(float $num[]){    
+                		
+        float $amnt1 = $num[0];
+        float $amnt2 = $num[1];
+					
+		if ($amnt2 == 0){ 
+			return 1; 
+		}else{
+			return pow($num[0], $num[1] / 2) * pow($num[0], $num[1] / 2);
+		}
+}
+
+    //Mode
+ proc float MODE(float $num[]){    
+		
+		if ($num[0] == $num[1]){
+		    return $num[0];
+		                        }
+				if ($num[0] == $num[2]){
+		    return $num[0];
+		                                }
+		if ($num[1] == $num[2]){
+		    
+		    return $num[1];		                 				
+				
+				} else {
+		    print (" !!! Warning: There is no mode. Mode result is now 0 !!!" + "\n");
+		    return 0;		     
+		}
+		//return $Num1;
+
+}
+    //Values
+    float $values[] = {5,10,10};
+    
+
+    $sum = Add($values);
+    $divide = Minus($values);
+    $multi = Multiply($values);
+    $divi = Divide($values);
+    $mea = MEAN($values);
+    $median = Med($values);
+    $p = pow($values);
+    $md = MODE($values);
+	
+print ($values[0] + " + " + $values[1]  + " + " +  $values[2] + " = " + $sum + "\n");
+print ($values[0] + " - " + $values[1]  + " - " +  $values[2] + " = "  + $divide + "\n");
+print ($values[0] + " * " + $values[1]  + " * " +  $values[2] + " = "  + $multi + "\n");
+print ($values[0] + " / " + $values[1]  + " / " +  $values[2] + " = " + $divi + "\n");
+print ("The mean of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " +  $mea + "\n");
+print ("The median of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " +  $median + "\n");
+print ($values[0] + " To the power of " + $values[1] +  " is: " +  $p + "\n");
+print ("The mode of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " +  $md + "\n");
