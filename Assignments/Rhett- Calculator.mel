@@ -68,23 +68,21 @@ proc float Med(float $num[]){
 
     //Mode
  proc float MODE(float $num[]){    
-        
-        float $Num1 = $num[0];
-        float $Num2 = $num[1];
-        float $Num3 = $num[2];
 		
-		if ($Num1 == $Num2 || $Num3){
-		    return $Num1;
-		    //print ("I Work." + "\n");
-		} else {
-		    print (" !!! Warning: Cannot Divide by Zero. Divide result is now 0"  + "!!!" + "\n");
+		if ($num[0] == $num[1]){
+		    return $num[0];
+		        }
+				if ($num[0] == $num[2]){
+		    return $num[0];
+				} else {
+		    print (" !!! Warning: There is no mode. Mode result is now 0 !!!" + "\n");
 		    return 0;		     
 		}
 		//return $Num1;
 
 }
     //Values
-    float $values[] = {10,50,4};
+    float $values[] = {10,50,10};
     
 
     $sum = Add($values);
