@@ -83,40 +83,50 @@
 		    print (" !!! Warning: There is no mode. Mode result is now 0 !!!" + "\n");
 		    return 0;		     
 		}
-        
-        //Call function
 }
-
+    //Case function
 	global proc float Calc (string $call, float $values[]){
 	
 	float $result; 
 	   
-	   switch($call){
-	        case "+":
+	switch($call){
+	    case "+":
 			$result = Add($values);
 		    print ($values[0] + " + " + $values[1]  + " + " +  $values[2] + " = " + $result + "\n");
-	}
-	return $result;
+		    break;
+		case "-":
+			$result = Minus($values);
+			print ($values[0] + " - " + $values[1]  + " - " +  $values[2] + " = "  + $result + "\n");
+			break;
+		case "*":
+			$result = Multiply($values);
+			print ($values[0] + " * " + $values[1]  + " * " +  $values[2] + " = "  + $result + "\n");
+			break;
+		case "/":
+			$result = Divide($values);
+			print ($values[0] + " / " + $values[1]  + " / " +  $values[2] + " = " + $result + "\n");
+			break;
+		case "mean":
+			$result = MEAN($values);
+			print ("The mean of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " + $result + "\n");
+			break;
+		case "median":
+			$result = Med($values);
+			print ("The median of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " + $result + "\n");
+			break;
+		case "power":
+			$result = pow($values);
+			print ($values[0] + " To the power of " + $values[1] +  " is: " + $result + "\n");
+			break;
+		case "mode":
+			$result = MODE($values);
+			print ("The mode of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " + $result + "\n");
+			break;
+	}	
+	print ($result);
+    return $result;
 }
-
+     Calc("mode", $values);
     //Values
+    //This calculator only can solve for 3 numbers because I'm stupid. ¯\_(?)_/¯
     float $values[] = {5,10,10};
-    Calc("+", $values);
-
-    //$sum = Add($values);
-    $divide = Minus($values);
-    $multi = Multiply($values);
-    $divi = Divide($values);
-    $mea = MEAN($values);
-    $median = Med($values);
-    $p = pow($values);
-    $md = MODE($values);
-	
-//print ($values[0] + " + " + $values[1]  + " + " +  $values[2] + " = " + $sum + "\n");
-//print ($values[0] + " - " + $values[1]  + " - " +  $values[2] + " = "  + $divide + "\n");
-//print ($values[0] + " * " + $values[1]  + " * " +  $values[2] + " = "  + $multi + "\n");
-//print ($values[0] + " / " + $values[1]  + " / " +  $values[2] + " = " + $divi + "\n");
-//print ("The mean of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " +  $mea + "\n");
-//print ("The median of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " +  $median + "\n");
-//print ($values[0] + " To the power of " + $values[1] +  " is: " +  $p + "\n");
-//print ("The mode of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " +  $md + "\n");
