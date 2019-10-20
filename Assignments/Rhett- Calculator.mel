@@ -91,42 +91,55 @@
 	   
 	switch($call){
 	    case "+":
+	    case "add":
+	    case "Add":
 			$result = Add($values);
 		    print ($values[0] + " + " + $values[1]  + " + " +  $values[2] + " = " + $result + "\n");
 		    break;
 		case "-":
+		case "subtract":
+		case "Subtract":
 			$result = Minus($values);
 			print ($values[0] + " - " + $values[1]  + " - " +  $values[2] + " = "  + $result + "\n");
 			break;
 		case "*":
+		case "multiply":
+		case "Multiply":
 			$result = Multiply($values);
 			print ($values[0] + " * " + $values[1]  + " * " +  $values[2] + " = "  + $result + "\n");
 			break;
 		case "/":
+		case "divide":
+		case "Divide":
 			$result = Divide($values);
 			print ($values[0] + " / " + $values[1]  + " / " +  $values[2] + " = " + $result + "\n");
 			break;
 		case "mean":
+		case "Mean":
 			$result = MEAN($values);
 			print ("The mean of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " + $result + "\n");
 			break;
 		case "median":
+		case "Median":
 			$result = Med($values);
 			print ("The median of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " + $result + "\n");
 			break;
 		case "power":
+		case "Power":
 			$result = pow($values);
 			print ($values[0] + " To the power of " + $values[1] +  " is: " + $result + "\n");
 			break;
 		case "mode":
+		case "Mode":
 			$result = MODE($values);
 			print ("The mode of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " + $result + "\n");
 			break;
 	}	
-	print ($result);
+	//print ($result);
+	//I have no idea why this return doesn't work.
     return $result;
 }
-     Calc("mode", $values);
+     Calc("Add", $values);
     //Values
     //This calculator only can solve for 3 numbers because I'm stupid. ¯\_(?)_/¯
     float $values[] = {5,10,10};
