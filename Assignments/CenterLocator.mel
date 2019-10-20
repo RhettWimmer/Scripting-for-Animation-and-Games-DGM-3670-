@@ -1,0 +1,45 @@
+/*Use MEL to create a function that builds a locator at the center of the current selection(s).  
+Use parameters and arguments to accomplish specific functionality as outlined:
+
+Create a locator at the combined center of all selected objects.
+Create a locator at the center of each individual selection. This includes objects as well as components, joints, clusters, etc.
+Include an optional parameter to match the locator orientation to the respective selection.
+
+
+Familiarity with the xform and spaceLocator commands.
+Familiarity and differences between world space and relative space.
+Continued used of functions and parameters.
+Bounding Box is a hint.
+*/
+
+/* ------- Questions -----------
+    - Cover Xform
+    - How to use the query
+
+*/
+
+    string $objs[] = `ls -sl`;
+
+    spaceLocator -p 0 0 0;
+    
+    xform -q -boundingBox pSphere1;
+
+    print ($objs);
+    
+// - Single Object -
+    // Take object
+    // Find bounding box of object
+    // Half the bounding box values 
+    // Create locator at the halved values 
+    
+// - Mulpiple Object -
+    // Find a Selection
+    // Take x,y,z values from each object
+    // Add the x,y,z locations
+    // Then divide values by 2
+    // Create a locator at the x,y,x result
+    
+    
+    
+
+
