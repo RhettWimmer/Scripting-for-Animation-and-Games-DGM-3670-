@@ -19,12 +19,12 @@ Bounding Box is a hint.
 */
 
     string $objs[] = `ls -sl`;
-
-    spaceLocator -p 0 0 0;
+   
+    //spaceLocator -p 0 0 0;
     
     xform -q -boundingBox pSphere1;
-
-    print ($objs);
+//combine mesh, delete mesh after finding center
+    
     
 // - Single Object -
     // Take object
