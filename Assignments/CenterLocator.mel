@@ -12,17 +12,18 @@ Continued used of functions and parameters.
 Bounding Box is a hint.
 */
 
-/* ------- Questions -----------
-    - Cover Xform
-    - How to use the query
+    string $sel[] = `ls -sl`;
+    float $box;
 
-*/
 
-    string $objs[] = `ls -sl`;
-   
-    //spaceLocator -p 0 0 0;
-    
-    xform -q -boundingBox pSphere1;
+
+
+
+
+
+
+
+
 //combine mesh, delete mesh after finding center
     
     
