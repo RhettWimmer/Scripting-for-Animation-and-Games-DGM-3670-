@@ -12,27 +12,37 @@ Continued used of functions and parameters.
 Bounding Box is a hint.
 */
 
+
+
+
            float $box[];
            float $X;
            float $Y;
-           float $transZ;               
+           float $transZ;      
+           float $loc[];         
 //- Single Object -
     // Take object
             
             string $sel[] = `ls -sl`;
     // Find bounding box of object       
-            $box = `xform -q -bb`;
+            $box = `xform -q -bb - ws`;
             
     // Half the bounding box values "Midpoint Value"
             $transX = $box[0];
             $transY = $box[1];
-            $transZ = $box[2];
-            
-            
-            print ($transX);
-            print ($transY);
-            print ($transZ);            
-    // Create locator at the halved values 
+            $transZ = $box[2];      
+    //Figure halved values     
+             
+             $loc[0] = ($box[0] + $box[3]) / 2;
+             $loc[1] = ($box[1] + $box[4]) / 2;
+             $loc[2] = ($box[2] + $box[5]) / 2;
+    //Create Locator
+            spaceLocator -p $loc[0] $loc[1] $loc[2];
+            //print ($transX);
+            //print ($transY);
+            //print ($transZ);
+            print ($loc[2]);                  
+ 
 
 /*
     string $sel[] = `ls -sl`;
