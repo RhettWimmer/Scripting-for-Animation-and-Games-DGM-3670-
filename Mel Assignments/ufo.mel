@@ -1,0 +1,7 @@
+polySphere -name "UFO_Geo";
+move 0 2 0;
+scale 10 1 10;
+
+polySphere -name "Dome";
+move 0 2 0;
+scale 4.5 4.5 4.5 ;

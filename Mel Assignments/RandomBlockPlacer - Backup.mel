@@ -1,0 +1,14 @@
+proc RandomBlockPlacer(){
+    //Input
+	int $sizePlus = 5;
+	int $sizeMinus = -5;
+	//Work
+	float $randNumOne = `rand $sizeMinus $sizePlus`;
+	float $randNumTwo = `rand $sizeMinus $sizePlus`;
+	float $randNumThree = `rand $sizeMinus $sizePlus`;
+	string $objs[];
+	
+	$objs = `polyCube`;
+	move -absolute -worldSpace ($randNumOne) ($randNumTwo) ($randNumThree) $objs[0];
+    }
+RandomBlockPlacer();

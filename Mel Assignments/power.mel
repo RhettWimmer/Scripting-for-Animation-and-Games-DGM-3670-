@@ -1,0 +1,26 @@
+/*    float $nui = 10;
+    float $result = 0;
+    for($i = 1; $i < $nui; $i++){
+       $result = $nui * $i;
+    } 
+    
+    print ($i + "\n");
+    print ($result);
+    
+    */
+    
+   /* proc float pow(float $num[]){    
+                		
+        float $amnt1 = $num[0];
+        float $amnt2 = $num[1];
+					
+		if ($amnt2 == 0){ 
+			return 1; 
+		}else{
+			return $amnt1 * pow($amnt1, $amnt2 / 2) * pow($amnt1, $amnt2 / 2);
+		}
+}
+
+    float $val[] = {10,10,4};  
+
+    float $p = pow($val); */

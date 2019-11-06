@@ -1,0 +1,17 @@
+proc randItem(
+int $amountVal,
+int $minValX, int $maxValX,
+int $minValY, int $maxValY,
+int $minValZ, int $maxValZ){
+
+	for ($i = 0; $i < $amountVal; $i++){
+	float $randNumX = `rand $minValX $maxValX`;
+	float $randNumY = `rand $minValY $maxValY`;
+	float $randNumZ = `rand $minValZ $maxValZ`;
+	string $objs[];
+	
+	    $objs = `polyCube`;
+	    move -absolute -worldSpace ($randNumX) ($randNumY) ($randNumZ) $objs[0];	    
+    } 
+}
+randItem(5, -10, 10, -10, 10, -10, 10);

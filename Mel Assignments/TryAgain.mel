@@ -1,0 +1,32 @@
+{
+string $obj[];
+
+$obj = `polySphere`;
+move 0 2.7 0 $obj[0];
+scale 4.2 2.5 2.1 $obj[0];
+rename $obj[0] "Pusheen";
+
+setAttr "polySphere1.subdivisionsHeight" 9;
+
+polyDelEdge -cv true -ch 1 Pusheen.e[179] Pusheen.e[199] Pusheen.e[219] Pusheen.e[239] Pusheen.e[259] Pusheen.e[279] Pusheen.e[299] Pusheen.e[319] Pusheen.e[339];
+polyDelEdge -cv true -ch 1 Pusheen.e[161] Pusheen.e[180] Pusheen.e[199] Pusheen.e[218] Pusheen.e[237] Pusheen.e[256] Pusheen.e[275] Pusheen.e[294] Pusheen.e[313];
+
+//Tail
+polyExtrudeFacet Pusheen.f[71];
+polyMoveFacet -tx 1.5 -ty 2 -tz 0 Pusheen.f[71];
+scale 1 .5 .1 Pusheen.f[71];
+
+//Ears
+polyExtrudeFacet Pusheen.f[98];
+move -3 5.8 .1 Pusheen.f[98];
+polyExtrudeFacet Pusheen.f[152];
+polyMoveFacet -tx -6 -ty 1  Pusheen.f[152];
+scale .1 1 1 Pusheen.f[152];
+
+$obj = `polySphere`;
+move -2.7 3.6 1.4 $obj[0];
+scale .3 .14 .30 $obj[0];
+rotate 1508.9 -15.9 -2.4 $obj[0];
+
+print $obj;
+}

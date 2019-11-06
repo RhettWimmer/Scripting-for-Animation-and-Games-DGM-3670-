@@ -1,0 +1,4 @@
+Why can't I print something if it's in a fucntion?
+How to get mode
+how to not hard code it
+cover returns

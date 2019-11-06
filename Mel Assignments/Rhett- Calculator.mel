@@ -1,0 +1,147 @@
+// --------- Run at least 3 times for results to work. I have no idea why. ---------- //
+
+        //Addition  
+	global proc float Add(float $num[]){    
+        float $amount;
+        $amount = $num[0] + $num[1] + $num[2];
+        
+        return $amount;
+}
+        //Subtraction
+	global proc float Minus(float $num[]){    
+        float $amount;
+        $amount = $num[0] - $num[1] - $num[2];
+        
+        return $amount;
+}
+        //Multiply
+	global proc float Multiply(float $num[]){
+    float $amount;
+	$amount = $num[0] * $num[1] * $num[2];
+	
+	return $amount;
+}
+
+		//Divide
+	global proc float Divide (float $num[]){
+	float $amount;
+	
+	if ($num[1] == 0){ 
+			print (" !!! Warning: Cannot Divide by Zero. Divide result is now 0"  + "!!!" + "\n");
+		}if ($num[2] == 0){
+		    print (" !!! Warning: Cannot Divide by Zero. Divide result is now 0"  + "!!!" + "\n");
+		}else{
+	$amount = $num[0] / $num[1] / $num[2];
+	
+	return $amount;
+	}
+}
+
+    //Mean
+	global proc float MEAN(float $num[]){    
+        float $amount;
+        float $r = size($num);
+        $amount = $num[0] + $num[1] + $num[2];
+        $wat = $amount / $r;
+        
+        return $wat;
+}
+
+    //Median
+	global proc float Med(float $num[]){   
+        
+        float $sorted[] = `sort $num`;
+        
+        return ($sorted[(size($num)/2)]);
+}
+
+    //Power
+    global proc float pow(float $num[]){    
+                		
+        float $amnt1 = $num[0];
+        float $amnt2 = $num[1];
+					
+		if ($amnt2 == 0){ 
+			return 1; 
+		}else{
+			return pow($num[0], $num[1] / 2) * pow($num[0], $num[1] / 2);
+		}
+}
+
+    //Mode
+	global proc float MODE(float $num[]){    
+		
+		if ($num[0] == $num[1]){
+		    return $num[0];
+		                        }
+				if ($num[0] == $num[2]){
+		    return $num[0];
+		                                }
+		if ($num[1] == $num[2]){
+		    
+		    return $num[1];		                 				
+				
+				} else {
+		    print (" !!! Warning: There is no mode. Mode result is now 0 !!!" + "\n");
+		    return 0;		     
+		}
+}
+    //Case function
+	global proc float Calc (string $call, float $values[]){
+	
+	float $result; 
+	   
+	switch($call){
+	    case "+":
+	    case "add":
+	    case "Add":
+			$result = Add($values);
+		    print ($values[0] + " + " + $values[1]  + " + " +  $values[2] + " = " + $result + "\n");
+		    break;
+		case "-":
+		case "subtract":
+		case "Subtract":
+			$result = Minus($values);
+			print ($values[0] + " - " + $values[1]  + " - " +  $values[2] + " = "  + $result + "\n");
+			break;
+		case "*":
+		case "multiply":
+		case "Multiply":
+			$result = Multiply($values);
+			print ($values[0] + " * " + $values[1]  + " * " +  $values[2] + " = "  + $result + "\n");
+			break;
+		case "/":
+		case "divide":
+		case "Divide":
+			$result = Divide($values);
+			print ($values[0] + " / " + $values[1]  + " / " +  $values[2] + " = " + $result + "\n");
+			break;
+		case "mean":
+		case "Mean":
+			$result = MEAN($values);
+			print ("The mean of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " + $result + "\n");
+			break;
+		case "median":
+		case "Median":
+			$result = Med($values);
+			print ("The median of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " + $result + "\n");
+			break;
+		case "power":
+		case "Power":
+			$result = pow($values);
+			print ($values[0] + " To the power of " + $values[1] +  " is: " + $result + "\n");
+			break;
+		case "mode":
+		case "Mode":
+			$result = MODE($values);
+			print ("The mode of " + $values[0] + ", " + $values[1]  + ", and " +  $values[2] + " is: " + $result + "\n");
+			break;
+	}	
+			//print ($result);
+	//I have no idea why this return doesn't work.
+    return $result;
+}
+     Calc("Add", $values);
+    //Values
+    //This calculator only can solve for 3 numbers.
+    float $values[] = {5,10,10};

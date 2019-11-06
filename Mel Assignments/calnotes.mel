@@ -1,0 +1,8 @@
+add (float values, []){
+
+$sum = 0;
+for($i=0;$i<size($values);$i++){
+    $sum = $sum + $values [$i]
+}
+     return $sum;
+}
