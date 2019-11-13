@@ -1,0 +1,4 @@
+Explain if not statements 
+Explain continue
+Why would you use a tuple
+expain with
