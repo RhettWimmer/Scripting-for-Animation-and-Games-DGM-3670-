@@ -1,4 +1,4 @@
-Values = [3,10]
+Values = [10,5,30,50,100]
 Power = 3
 
 # Addition #
@@ -8,7 +8,6 @@ def Add(Vals):
     for i in Vals:
         total += i
     print(total)
-    
 Add(Values)
 
 # Subtraction # 
@@ -29,24 +28,35 @@ def Multi(Vals):
     print(total)
 Multi(Values)
 
-# Division # !!!!!!!!!!!!Help!!!!!!!!!!!!!!!!!
+# Division # 
 def Divi(Vals):
-    total=0
+    total=Vals[0]
     print('Division:')
     for i in Vals:
         total /= i
     print(total)
 Divi(Values)  
 
-# Power # !!!!!!!!!!!!Help!!!!!!!!!!!!!!!!!
+# Power # 
 def Pow(Vals,PowerVal):
     import math
     total=0
     print('Power Totals Are:')
     for i in Vals:
         print math.pow(i,PowerVal)
-
 Pow(Values,Power)
 
-# Mode #
-#import statistics 
+# Mean #
+def Mean(Vals):
+    print('Mean:')
+    total=0
+    size=len(Vals)
+    for i in Vals:
+        total += i
+    print(total/size)
+Mean(Values)
+
+# Median #
+def Median(Vals)
+    Vals.sort()
+Median(Values)
