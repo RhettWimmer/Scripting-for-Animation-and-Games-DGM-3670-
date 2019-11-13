@@ -1,0 +1,11 @@
+-Lists can be changed, and are ordred. 
+-sets {} can't change, not orderable
+-Dictionatries {ball: [x,y,z], rot, [children]} explain what it is. 
+	can change
+
+
+
+Range (is incrementor)
+len(list) = sizeof
+end statments wih :
+ebverything in statment has to be indented

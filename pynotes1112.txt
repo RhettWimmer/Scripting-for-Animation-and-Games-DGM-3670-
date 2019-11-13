@@ -1,0 +1,8 @@
+.append([list1, list2])
+makes [1,2,3,[list1, list2]]
+
+.extennd makes 
+makes [1,2,3, list1,list2]
+
+
+help('thingyouwanttofind')
