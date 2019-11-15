@@ -8,6 +8,7 @@ def Add(Vals):
     for i in Vals:
         total += i
     print(total)
+    return total
 Add(Values)
 
 
@@ -41,7 +42,7 @@ def Divi(Vals):
 Divi(Values)
 
 
-# Power # 
+# Power #
 def Pow(Vals, PowerVal):
     import math
     print('Power Totals Are:')
@@ -72,3 +73,6 @@ def Mode(Vals):
     total = Vals
     print statistics.mode(total)
 Mode(Values)
+
+
+
