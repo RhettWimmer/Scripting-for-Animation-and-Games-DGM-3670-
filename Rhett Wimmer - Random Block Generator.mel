@@ -1,4 +1,4 @@
-$proc randItem(
+proc randItem(
 int $amountVal,
 int $minValX, int $maxValX,
 int $minValY, int $maxValY,
