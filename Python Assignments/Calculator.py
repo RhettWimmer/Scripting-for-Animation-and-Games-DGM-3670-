@@ -11,7 +11,11 @@ Define "userInput" to tell the calculator what function to solve for.
     7 = Median
     8 = Mode
 '''
-Values = [1,5,10,100,10,5,10]
+class Calculator:
+    def __init__(self):
+        pass
+
+Values = [1,10,50,100]
 Power = 3
 userInput = 1
 
@@ -26,8 +30,8 @@ Add(Values)
 
 # Subtraction input 2 #
 def Sub(Vals):
-    total = 0
-    for i in Vals:
+    total = Vals[0]
+    for i in Vals[1:]:
         total -= i
     return total
 Sub(Values)
