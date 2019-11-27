@@ -1,4 +1,9 @@
-import maya.cmds as mc
+''' This tool scatters objects randomly in the scene.
+    User defined parameters: 
+    AmountOfBlocks = How many blocks will be spawned.
+    MinXVal, MaxXVal = Scale of were blocks can be spawned on X axis
+    MinYVal, MaxYVal = Scale of were blocks can be spawned on Y axis
+    MinZVal, MaxZVal = Scale of were blocks can be spawned on Z axis'''    
 
 AmountOfBlocks = 10
 MinXVal = -10
@@ -8,6 +13,7 @@ MaxYVal = 10
 MinZVal = -10
 MaxZVal = 10
 
+import maya.cmds as mc
 def randItem(amntBlock, minValX, maxValX, minValY, maxValY, minValZ, maxValZ):
     import random
     for i in range(amntBlock):

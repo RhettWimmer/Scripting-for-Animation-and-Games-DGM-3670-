@@ -1,3 +1,5 @@
+''' This tool finds the center of selection of polygon objects. '''
+
 import maya.cmds as mc
 def CenterLocator():
    # Variables #
@@ -38,3 +40,4 @@ def CenterLocator():
    if (big == 0):
         mc.warning(" ! ! ! Must make a selection ! ! !")
 CenterLocator()
+
