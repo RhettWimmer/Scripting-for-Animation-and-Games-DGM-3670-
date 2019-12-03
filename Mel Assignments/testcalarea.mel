@@ -1,0 +1,51 @@
+
+/*
+proc float power1(float $num[]){    
+        float $amount1;
+        //float $amount3;
+        
+        $amount1 = $num[0] * $num[0] * $num[0];
+        //$amount3 = `$num[2] * $num[2] * $num[2]`;
+        
+        //return {$amount1, $amount2, $amount3};
+        return ($amount1);
+}
+
+proc float power2(float $num[]){
+    float $amount2;
+    
+    $amount2 = $num[1] * $num[1] * $num[1];
+        return ($amount2);
+}
+
+float $vs[] = {1,2,4};
+$pow1 = power1($vs);
+$pow2 = power2($vs);
+*/
+
+
+
+
+
+/*
+global proc float p1(float $nume[]){
+    
+    float $pp = $nume[0];
+    for($i = 0; $i < $nume[0]; $i++){
+
+    } 
+    
+    return $pp;
+    print ($pp);
+}
+float $p1[] = {10};
+*/
+    
+    float $nui = 10;
+    float $result = 0;
+    for($i = 1; $i < $nui; $i++){
+       $result = $nui * $i;
+    } 
+    
+    print ($i + "\n");
+    print ($result);

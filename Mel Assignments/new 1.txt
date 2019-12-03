@@ -1,0 +1,16 @@
+string $names[] = {"Bill", "Donkey", "Chonker"};
+int $numAss = 10;
+
+float $grades[size($names)][$numAss];
+
+for $i = 0;i < $names; $i++){
+	
+print $names[i];
+	
+	for ($j = 0l $j < $numAss; $j++){
+		print $numAss[$i][$j];
+	}
+}
+
+
+
