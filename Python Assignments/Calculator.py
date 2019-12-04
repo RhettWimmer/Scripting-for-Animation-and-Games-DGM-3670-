@@ -11,13 +11,10 @@ Define "userInput" to tell the calculator what function to solve for.
     7 = Median
     8 = Mode
 '''
-class Calculator:
-    def __init__(self):
-        pass
 
 Values = [1,10,50,100]
 Power = 3
-userInput = 1
+userInput = 6
 
 # Addition input 1 #
 def Add(Vals):

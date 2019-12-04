@@ -1,6 +1,6 @@
 import maya.cmds as mc
 
-UserDefinedColor = 'blue'
+UserDefinedColor = '0'
 UserDefinedRadius = 1
 
     # Selection #
@@ -10,9 +10,7 @@ def createControl(UserDefinedRadius):
     pivCen = mc.xform(sels, q = True, ws = True, scalePivot = True)
     Rot = mc.xform(sels, q = True, ws = True, rotation = True)
     createC = mc.circle(center = pivCen, radius = UserDefinedRadius)
-    mc.select(all = True, vis = True)
-    sel2 = mc.ls(sl = True)
-    mc.rotate(Rot[0], Rot[1], Rot[2], sel2)       
+    mc.rotate(Rot[0], Rot[1], Rot[2], createC)       
 createControl(UserDefinedRadius)
 
 def colorControl(UserDefinedColor):   
