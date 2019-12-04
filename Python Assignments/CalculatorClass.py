@@ -11,10 +11,11 @@ Define "userInput" to tell the calculator what function to solve for.
     7 = Median
     8 = Mode
 '''
+import maya.cmds as mc
 
-Values = [1,10,50,50]
+Values = [1,10,50,50,100]
 Power = 3
-userInput = 2
+userInput = 8
 
 class Calculator:
     # Addition input 1 #
@@ -37,19 +38,25 @@ class Calculator:
             print total
             return total
 
-    ''' # Multiplication input 3 #
+    # Multiplication input 3 #
     def Multi(self, Vals):
         total = 1
         for i in Vals:
             total *= i
-        return total'''
+        if userInput == 3:
+            print 'Multiplying ' + str(Values) + ' = '
+            print total
+            return total
 
     # Division input 4 #
-    '''def Divi(self, Vals):
+    def Divi(self, Vals):
         total = Vals[0]
         for i in Vals[1:]:
             total /= i
-        return total'''
+        if userInput == 4:
+            print 'Dividing ' + str(Values) + ' = '
+            print total
+            return total
 
     # Power input 5#
     def Pow(self, Vals, PowerVal):
@@ -85,11 +92,13 @@ class Calculator:
         if userInput == 8:
             print 'The mode of ' + str(Values) + ' = '
             print statistics.mode(total)
-            return statistics.mode(total)
+            return statistics.mode(total) 
 
 calc = Calculator()
 calc.Add(Values)
 calc.Sub(Values)
+calc.Multi(Values)
+calc.Divi(Values)
 calc.Pow(Values, Power)
 calc.Mean(Values)
 calc.Median(Values)
