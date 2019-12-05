@@ -1,0 +1,1 @@
+Init is like start in C#
