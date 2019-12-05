@@ -1,6 +1,5 @@
 ''' This tool creates a NURBS circle at the pivot of an object.
     This tool aslo colors it to desired color. 
-    ! ! ! Note: This tool freezes transformations of geo on runtime ! ! !
     
     User defined parameters: 
       -  UserDefinedColor = Sets the NURB to the selected color.
@@ -18,7 +17,6 @@ def createControl(UserDefinedRadius):
     
        # Selection #
     sels = mc.ls(sl = True)
-    mc.makeIdentity(sels, apply = True) 
     if len(sels):
         for sel in sels:
             pivCen = mc.xform(sel, q = True, ws = True, scalePivot = True)
@@ -52,10 +50,4 @@ def colorControl(UserDefinedColor):
         mc.setAttr('%s.overrideEnabled' % shape, True)
         mc.setAttr('%s.overrideColor' % shape, colCode)
 
-colorControl(UserDefinedColor)   
-
-# Questions #
-# When I create a new nurb, it is place in the right area, but it's pivot is at 0  
-    # Solution, create at 0, then move to desired location
-# Issues #
-# Rotation inconsistancies            
+colorControl(UserDefinedColor)         
