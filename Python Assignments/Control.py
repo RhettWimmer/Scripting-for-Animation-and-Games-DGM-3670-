@@ -23,7 +23,8 @@ def createControl(UserDefinedRadius):
         for sel in sels:
             pivCen = mc.xform(sel, q = True, ws = True, scalePivot = True)
             Rot = mc.xform(sel, q = True, ws = True, rotation = True)
-            createC = mc.circle(center = pivCen, radius = UserDefinedRadius)
+            createC = mc.circle (radius = UserDefinedRadius)
+            mc.move(pivCen[0], pivCen[1], pivCen[2], createC)
             mc.rotate(Rot[0], Rot[1], Rot[2], createC)
     mc.warning('! ! ! Control placed sucessfully ! ! !')       
 createControl(UserDefinedRadius)
