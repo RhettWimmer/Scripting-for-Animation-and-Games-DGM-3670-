@@ -55,6 +55,6 @@ colorControl(UserDefinedColor)
 
 # Questions #
 # When I create a new nurb, it is place in the right area, but it's pivot is at 0  
-
+    # Solution, create at 0, then move to desired location
 # Issues #
 # Rotation inconsistancies            

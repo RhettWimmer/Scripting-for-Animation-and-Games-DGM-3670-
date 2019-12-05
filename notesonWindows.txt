@@ -1,1 +1,2 @@
 Init is like start in C#
+Place in mayascripts folder to import
