@@ -1,16 +1,31 @@
+''' This tool creates a NURBS circle at the pivot of an object.
+    This tool aslo colors it to desired color. 
+    ! ! ! Note: This tool freezes transformations of geo on runtime ! ! !
+    
+    User defined parameters: 
+      -  UserDefinedColor = Sets the NURB to the selected color.
+            Accepted inputs (Lowercase only): 'red', 'blue', 'yellow', 'green', 'purple'
+      -  UserDefinedRadius = Sets the size of NURBS circle. Accepts a float or int value. 
+'''
+
 import maya.cmds as mc
 
-UserDefinedColor = 'yellow'
+UserDefinedColor = 'green'
 UserDefinedRadius = 1
 
-    # Selection #
-sels = mc.ls(sl = True)
     # Create control function#
 def createControl(UserDefinedRadius):
-    pivCen = mc.xform(sels, q = True, ws = True, scalePivot = True)
-    Rot = mc.xform(sels, q = True, ws = True, rotation = True)
-    createC = mc.circle(center = pivCen, radius = UserDefinedRadius)
-    mc.rotate(Rot[0], Rot[1], Rot[2], createC)       
+    
+       # Selection #
+    sels = mc.ls(sl = True)
+    mc.makeIdentity(sels, apply = True) 
+    if len(sels):
+        for sel in sels:
+            pivCen = mc.xform(sel, q = True, ws = True, scalePivot = True)
+            Rot = mc.xform(sel, q = True, ws = True, rotation = True)
+            createC = mc.circle(center = pivCen, radius = UserDefinedRadius)
+            mc.rotate(Rot[0], Rot[1], Rot[2], createC)
+    mc.warning('! ! ! Control placed sucessfully ! ! !')       
 createControl(UserDefinedRadius)
     # Change color function #
 def colorControl(UserDefinedColor):   
@@ -32,11 +47,14 @@ def colorControl(UserDefinedColor):
     mc.select(nurbs) 
         
     # Color changer #
-    #for sel in sels:
-        #shapes = mc.listRelatives(sel, c = True, shapes = True, type = 'nurbsCurve')
-
     for shape in nurbs:
         mc.setAttr('%s.overrideEnabled' % shape, True)
         mc.setAttr('%s.overrideColor' % shape, colCode)
 
-colorControl(UserDefinedColor)                     
+colorControl(UserDefinedColor)   
+
+# Questions #
+# When I create a new nurb, it is place in the right area, but it's pivot is at 0  
+
+# Issues #
+# Rotation inconsistancies            
