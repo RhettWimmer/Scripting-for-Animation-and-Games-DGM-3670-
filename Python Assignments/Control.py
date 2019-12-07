@@ -17,13 +17,19 @@ def createControl(UserDefinedRadius):
     
        # Selection #
     sels = mc.ls(sl = True)
+    
     if len(sels):
         for sel in sels:
+            selName = str(sel)
             pivCen = mc.xform(sel, q = True, ws = True, scalePivot = True)
             Rot = mc.xform(sel, q = True, ws = True, rotation = True)
-            createC = mc.circle (radius = UserDefinedRadius)
+            createC = mc.circle (name = selName + '_Ctrl ',radius = UserDefinedRadius)
             mc.move(pivCen[0], pivCen[1], pivCen[2], createC)
             mc.rotate(Rot[0], Rot[1], Rot[2], createC)
+            
+    if (len(sels) == 0):
+        mc.circle(nr = [0, 1, 0], name = '_Ctrl',radius = UserDefinedRadius)
+        print("peepe")       
     mc.warning('! ! ! Control placed sucessfully ! ! !')       
 createControl(UserDefinedRadius)
     # Change color function #
