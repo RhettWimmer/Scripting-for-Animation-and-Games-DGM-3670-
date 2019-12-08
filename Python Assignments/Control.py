@@ -15,15 +15,16 @@ UserDefinedRadius = 1
     # Create control function#
 def createControl(UserDefinedRadius):
     
-       # Selection #
+     # Selection #
     sels = mc.ls(sl = True)
     
     if len(sels):
         for sel in sels:
-            selName = str(sel)
+            selName1 = str(sel).replace("_Geo","")
+            selName2 = selName1.replace("_Jnt","")
             pivCen = mc.xform(sel, q = True, ws = True, scalePivot = True)
             Rot = mc.xform(sel, q = True, ws = True, rotation = True)
-            createC = mc.circle (name = selName + '_Ctrl ',radius = UserDefinedRadius)
+            createC = mc.circle (name = selName2 + '_Ctrl ', radius = UserDefinedRadius)
             mc.move(pivCen[0], pivCen[1], pivCen[2], createC)
             mc.rotate(Rot[0], Rot[1], Rot[2], createC)
             
