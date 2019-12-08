@@ -17,6 +17,10 @@ class RWTools():
         mc.button(label = 'Center Locator',
                   p = self.m_column,
                   command = lambda *args: self.Center())       
+        mc.button(label = 'Renamer',
+                  p = self.m_column,
+                  command = lambda *args: self.RenamerFunc())              
+       
         mc.showWindow(self.winName)
         
         # Center Locator #
@@ -24,6 +28,11 @@ class RWTools():
             import CenterLocator
             reload (CenterLocator)
             CenterLocator.CenLoc()
+            
+        # Renamer #
+    def RenamerFunc(Self):
+            import Renamer
+            reload (Renamer)
            
         # Delete Window #     
     def delete(self):
