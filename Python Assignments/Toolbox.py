@@ -2,17 +2,18 @@ import maya.cmds as mc
 
 class RWTools():
     def __init__(self):
-        self.winName = 'RToolBox'
+        self.winName = "Rhett Wimmer's RADICAL ToolBox"
         
     def create(self):
-        self.winName = mc.window(self.winName, width = 150, height=10)
+        self.winName = mc.window(self.winName, width=400, height=400)
         self.m_column = mc.columnLayout(p = self. winName, 
                         adj = True, 
                         bgc = [0,0.6,0.4])
         # Buttons #                 
         mc.button(label = 'Select All',
                   p = self.m_column,
-                  command = lambda *args: mc.select(all = True))
+                  command = lambda *args: mc.select(all = True),
+                  bgc = [0, 0,0])
         mc.button(label = 'Center Locator',
                   p = self.m_column,
                   command = lambda *args: self.Center())       
