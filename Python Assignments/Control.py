@@ -6,7 +6,6 @@
             Accepted inputs (Lowercase only): 'red', 'blue', 'yellow', 'green', 'purple'
       -  UserDefinedRadius = Sets the size of NURBS circle. Accepts a float or int value. 
 '''
-
 import maya.cmds as mc
 
 UserDefinedColor = 'green'
