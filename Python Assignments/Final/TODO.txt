@@ -1,0 +1,26 @@
+Scripting Final
+_________________________________
+
+Converted to Class:
+	[]Random Placement Generator
+	[]Sequential Renamer Tool
+	[]Center Locator Tool
+	[]Control Creator
+	[]Color Assignment
+	[]Calculator
+
+In the toolbox:
+	[]Random Placement Generator
+	[]Sequential Renamer Tool
+	[]Center Locator Tool
+	[]Control Creator
+	[]Color Assignment
+	[]Calculator
+
+Reveiving input:
+	[]Random Placement Generator
+	[]Sequential Renamer Tool
+	[]Center Locator Tool
+	[]Control Creator
+	[]Color Assignment
+	[]Calculator
