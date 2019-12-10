@@ -8,7 +8,6 @@
 '''
 import maya.cmds as mc
 
-UserDefinedColor = 'green'
 UserDefinedRadius = 1
 
 class CC():

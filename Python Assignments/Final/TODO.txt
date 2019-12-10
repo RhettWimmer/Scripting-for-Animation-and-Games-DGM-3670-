@@ -5,8 +5,8 @@ Converted to Class:
 	[X]Random Placement Generator
 	[X]Sequential Renamer Tool
 	[X]Center Locator Tool
-	[]Control Creator
-	[]Color Assignment
+	[X]Control Creator
+	[X]Color Assignment
 	[X]Calculator
 
 In the toolbox:
