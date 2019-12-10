@@ -2,17 +2,17 @@ Scripting Final
 _________________________________
 
 Converted to Class:
-	[]Random Placement Generator
-	[]Sequential Renamer Tool
-	[]Center Locator Tool
+	[X]Random Placement Generator
+	[X]Sequential Renamer Tool
+	[X]Center Locator Tool
 	[]Control Creator
 	[]Color Assignment
-	[]Calculator
+	[X]Calculator
 
 In the toolbox:
 	[]Random Placement Generator
-	[]Sequential Renamer Tool
-	[]Center Locator Tool
+	[X]Sequential Renamer Tool
+	[X]Center Locator Tool
 	[]Control Creator
 	[]Color Assignment
 	[]Calculator
@@ -20,7 +20,7 @@ In the toolbox:
 Reveiving input:
 	[]Random Placement Generator
 	[]Sequential Renamer Tool
-	[]Center Locator Tool
+	[Doesn't Need to]Center Locator Tool
 	[]Control Creator
 	[]Color Assignment
 	[]Calculator
