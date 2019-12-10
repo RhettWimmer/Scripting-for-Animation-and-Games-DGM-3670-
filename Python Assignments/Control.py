@@ -28,8 +28,7 @@ def createControl(UserDefinedRadius):
             mc.rotate(Rot[0], Rot[1], Rot[2], createC)
             
     if (len(sels) == 0):
-        mc.circle(nr = [0, 1, 0], name = '_Ctrl',radius = UserDefinedRadius)
-        print("peepe")       
+        mc.circle(nr = [0, 1, 0], name = '_Ctrl',radius = UserDefinedRadius)      
     mc.warning('! ! ! Control placed sucessfully ! ! !')       
 createControl(UserDefinedRadius)
     # Change color function #
