@@ -1,26 +1,50 @@
 Scripting Final
+
 _________________________________
 
+
 Converted to Class:
+	
 	[X]Random Placement Generator
+
 	[X]Sequential Renamer Tool
+
 	[X]Center Locator Tool
+
 	[X]Control Creator
+
 	[X]Color Assignment
+
 	[X]Calculator
 
+
+
 In the toolbox:
-	[]Random Placement Generator
+
+	[X]Random Placement Generator
+
 	[X]Sequential Renamer Tool
+
 	[X]Center Locator Tool
-	[]Control Creator
-	[]Color Assignment
-	[]Calculator
+
+	[X]Control Creator
+
+	[X]Color Assignment
+
+	[X]Calculator
+
 
 Reveiving input:
+
+
 	[]Random Placement Generator
+
 	[]Sequential Renamer Tool
-	[Doesn't Need to]Center Locator Tool
+
+	[Doesn't Need to] Center Locator Tool
+
 	[]Control Creator
+
 	[]Color Assignment
+
 	[]Calculator
