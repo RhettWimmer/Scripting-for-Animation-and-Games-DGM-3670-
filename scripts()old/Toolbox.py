@@ -1,3 +1,4 @@
+# !! !! !! ! 
 import maya.cmds as mc
 import Color
 reload (Color)
@@ -28,7 +29,7 @@ class RWTools():
                   command = lambda *args: self.Center())
         # Renamer UI # 
                                 
-        self.Text = mc.textField(p = self.m_column, placeholderText = "HERE")
+        self.Text1 = mc.textField(p = self.m_column, placeholderText = "HERE")
         
         
         # ----------- #                                                                                           
@@ -107,9 +108,8 @@ class RWTools():
             import Renamer
             reload (Renamer)
             
-            newLorR = mc.textField(self.Text, q = 1, text = 1)
-            mc.textField(self.Text, e = 1, text = '')
-            print newLorR
+            value = mc.textField(self.Text1, q = 1, text = 1)
+            mc.textField(self.Text1, e = 1, text = '')
         # Random Generator #    
     def randGen(self):
             import RandomBlockGenerator

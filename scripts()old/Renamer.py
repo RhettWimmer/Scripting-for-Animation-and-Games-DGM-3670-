@@ -6,9 +6,9 @@
 import maya.cmds as mc
 import Toolbox
 reload (Toolbox)
-#LorR = Toolbox.newLorR
-#Apndg = Toolbox.newApndg
-#Type = Toolbox.newType
+LorR = Toolbox.newLorR
+Apndg = Toolbox.newApndg
+Type = Toolbox.newType
 
 class Namer():
     Number = 0
@@ -30,4 +30,4 @@ class Namer():
                       mc.rename(sel[i], lorR + "_" + apndg + "_" + str(i) + "_" + type)                   
     
 RN = Namer()
-RN.renamer(Toolbox.newLorR, Toolbox.newApndg, Toolbox.newType)
+RN.renamer(LorR, Apndg, Type)
