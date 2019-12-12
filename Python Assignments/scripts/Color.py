@@ -1,8 +1,8 @@
 import maya.cmds as mc
-UserDefinedColor = 'green'
+#UserDefinedColor = '0'
 
 class ColSel():
-    def colorControl(self, UserDefinedColor):   
+    def colorControl(self, UserDefinedColor):
         if UserDefinedColor == 'red':
             colCode = 13
         elif UserDefinedColor == 'blue':
@@ -22,4 +22,4 @@ class ColSel():
             mc.setAttr('%s.overrideEnabled' % shape, True)
             mc.setAttr('%s.overrideColor' % shape, colCode)
 CS = ColSel()
-CS.colorControl(UserDefinedColor)         
+CS.colorControl('red')         

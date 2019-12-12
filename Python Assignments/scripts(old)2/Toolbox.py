@@ -1,15 +1,14 @@
 # !! !! !! ! 
+
 import maya.cmds as mc
 newLorR = "Turd"
 newApndg = 'nugget'
 newType = 'Geo'
+
 class RWTools():
     def __init__(self):
         self.winName = "Rhett Wimmer's RADICAL ToolBox"
-            # Calculator # 
-    def TheCal(Self):    
-        import Calculator
-        reload (Calculator)     
+        
     def create(self):
         self.delete()
         self.winName = mc.window(self.winName, width=400, height=400)
@@ -25,11 +24,9 @@ class RWTools():
         mc.button(label = 'Create Center Locator',
                   p = self.m_column,
                   command = lambda *args: self.Center())
-        # Renamer UI # 
-        
-                           
-        mc.textField(p=self.m_column)    
-                                                                                                   
+        # Renamer UI #                    
+        self.N = mc.textField(p = self.m_column,
+                              width = 15)                 
         mc.button(label = 'Rename Selection',
                   p = self.m_column,
                   command = lambda *args: self.RenamerFunc())     
@@ -40,20 +37,15 @@ class RWTools():
         # Control Creator UI #          
         mc.button(label = 'Create Controls',
                   p = self.m_column,
-                  command = lambda *args: (self.ContCtrl())) 
+                  command = lambda *args: self.ContCtrl()) 
         # Color Changer UI #          
-        mc.button(label = 'Change Controls to Red',
+        mc.button(label = 'Change Color',
                   p = self.m_column,
-                  bgc = [0,0,0],
                   command = lambda *args: self.ColChng())
-        '''mc.button(label = 'Change Controls to Blue',
-                  p = self.m_column,
-                  bgc = [0,0,0.3],
-                  command = lambda *args: Color.ColSel('blue')) '''                 
         # Calculator UI #          
         mc.button(label = 'Add',
                   p = self.m_column,
-                  command = lambda *args: Calculator.Add(Values))                 
+                  command = lambda *args: calc.Add(Values))                 
         mc.button(label = 'Subtract',
                   p = self.m_column,
                   command = lambda *args: calc.Sub(Values))
@@ -86,8 +78,7 @@ class RWTools():
         # Renamer #
     def RenamerFunc(Self):
             import Renamer
-            reload (Renamer)
-
+            reload (Renamer)   
             print newLorR
         # Random Generator #    
     def randGen(Self):
@@ -100,8 +91,11 @@ class RWTools():
         # Color Changer #
     def ColChng(Self):
             import Color
-            reload (Color)
-            #Color.ColSel()                         
+            reload (Color) 
+        # Calculator # 
+    def TheCal(Self):    
+        import Calculator
+        reload (Calculator)                           
         # Delete Window #   
     def delete(self):
         if (mc.window(self.winName, exists = True)):
