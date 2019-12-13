@@ -41,10 +41,10 @@ Reveiving input:
 
 	[]Sequential Renamer Tool
 
-	[Doesn't Need to] Center Locator Tool
+	[X] Center Locator Tool
 
-	[]Control Creator
+	[X]Control Creator
 
-	[]Color Assignment
+	[X]Color Assignment
 
 	[]Calculator
